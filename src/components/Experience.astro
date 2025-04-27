@@ -1,0 +1,36 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+
+const EXPERIENCE = [
+    {
+        date: 'Octubre 2024',
+        title: 'Administrador de Sistemas & Web - VillageNiu',
+        description:
+            'Administrador de sistemas informaticos de la empresa. Responsable de las actualizaciones de la pagina web segun lo demandado, del mantenimiento de los equipos informaticos. Resolucion de Problemas Informaticos. Actualizaciones y propuestas de mejora.',
+        link: '#',
+        lastest: true, //Esto es para que salga el tag de lastest job
+    },
+    {
+        date: 'Junio 2024',
+        title: 'Desarrollador Web - VillageNiu (Practicas)',
+        description:
+            'Desarrollador de las 2 paginas web de la empresa (villageniu.net & activavalles.net). Uso de Webflow.',
+        
+    },
+
+]
+
+---
+
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        EXPERIENCE.map(experience => (
+            <li class="mb-10 ms-6">
+                <ExperienceItem {...experience} />
+            </li>
+        ))
+    }                  
+    
+</ol>
+

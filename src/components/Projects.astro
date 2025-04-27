@@ -1,0 +1,85 @@
+---
+import { Image } from "astro:assets"
+import HtmlIcon from "../icons/HtmlIcon.astro"
+import CSSIcon from "../icons/CSSIcon.astro"
+import JavascriptIcon from "../icons/JavascriptIcon.astro"
+import GithubIcon from "../icons/GithubIcon.astro"
+import WebIcon from "../icons/WebIcon.astro"
+const TAGS = {
+    HTML: {
+        name: "HTML",
+        class: "bg-orange-500 text-white",
+        icon: HtmlIcon,
+    },
+
+    CSS: {
+        name: "CSS",
+        class: "bg-blue-500 text-white",
+        icon: CSSIcon,
+    },
+
+    JavaScript: {
+        name: "JavaScript",
+        class: "bg-yellow-500 text-white",
+        icon: JavascriptIcon,
+
+    },
+
+}
+
+const PROJECTS = [
+    {
+        title: 'Tus Imprescindibles - HTML SHOP',
+        description: 'Mi primer proyecto en HTML para la asignatura de Aplicaciones Web de FP de grado medio de sistemas microinformaticos en red (SMR). Una tienda de ropa y calzado donde podras selecccionar la ropa que más te guste.',
+        link: 'https://html-shop.vercel.app',
+        github: 'https://github.com/K1rb1-30/HTML-Shop',
+        image: '/projects/htmlShop.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript]
+    }   
+]
+---
+
+{
+    PROJECTS.map(({ image, title, description, tags, link, github}) => (
+        <article>
+            <h3 class="text-2xl font-semibold text-purple-200 mb-2">{title}</h3>
+            <p class="text-lg mb-4 text-pretty">{description}</p>
+            <ul class="flex gap-x-2 flex-row">
+                {tags.map((tag) => (
+                    <li>
+                        <span class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2`}>
+                            <tag.icon class="size-4"/>
+                            {tag.name}
+                        </span>
+                       
+                    </li>
+                ))}
+            </ul>
+            <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`} />
+            <span class="flex gap-x-2 flex-row my-4">
+                {
+                    link &&(
+                        <a href={link} class="flex gap-x-2 rounded-xl text-lg py-1 px-2 bg-violet-400/50 text-white hover:scale-110 hover:bg-violet-300/20 transition">
+                            <WebIcon class="size-6"></WebIcon>
+                            <h1>View</h1>
+                        </a>
+                        
+
+                    )
+                }
+
+                {
+                    github &&(
+                        <a href={github} class="flex gap-x-2 rounded-xl text-lg py-1 px-2 bg-violet-400/50 text-white hover:scale-110 hover:bg-violet-300/20 transition ">
+                            <GithubIcon class="size-6"></GithubIcon>
+                            <h1>Github</h1>
+                        </a>
+                        
+                    )
+
+                }
+            </span>
+            
+        </article>
+    ))
+}

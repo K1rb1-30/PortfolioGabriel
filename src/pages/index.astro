@@ -1,0 +1,79 @@
+---
+import Badge from '../components/Badge.astro';
+import Layout from '../layouts/Layout.astro';
+import SocialPill from '../components/SocialPill.astro';
+import LinkedInIcon from '../icons/LinkedInIcon.astro';
+import GithubIcon from '../icons/GithubIcon.astro';
+import MailIcon from '../icons/MailIcon.astro';
+import Experience from '../components/Experience.astro';
+import SectionContainer from '../components/SectionContainer.astro';
+import BriefCase from '../icons/BriefCase.astro';
+import CodeIcon from '../icons/CodeIcon.astro';
+import Projects from '../components/Projects.astro';
+
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout 
+	title="Porfolio de Gabriel - Desarrolador y Programador Full-Stack con 1 año de experiencia"
+	description='Contrata a Gabriel para crear aplicaciones web'
+
+>
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-32">
+			<img class="rounded-full size-12" src="./src/assets/perfil.jpg" alt="Photo de perfil"/>
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-6">Hey, soy Gabriel 
+				<a 
+				 href="https://www.linkedin.com/in/gabriel-s%C3%A1nchez-flores-044a65310/"
+				 target="_blank"
+				 rel="noopener"
+				 class="flex justify-center items-center"
+				>
+				 <Badge>Disponible para trabajar</Badge>
+				</a> </h1>
+			<h2 class="text-xl  text-wrap max-w-[700px]">
+				<span>1 año de experiencia. </span><span class=" text-emerald-300">Desarrollador Full-Stack y estudiante de Grado Medio de SMR (2n curso).</span>
+				<span class="text-violet-200"> De Barcelona, España.</span></h2>
+
+			<nav class="flex gap-4 mt-7 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/gabriel-s%C3%A1nchez-flores-044a65310/">
+					<LinkedInIcon class="size-4 md:size=6" />
+					LinkedIn
+				</SocialPill>
+
+				<SocialPill href="https://github.com/K1rb1-30">
+					<GithubIcon class="size-4 md:size=6" />
+					Github
+				</SocialPill>
+
+				<SocialPill href="mailto:e.gsanchezf@ies-sabadell.cat">
+					<MailIcon class="size-4 md:size=6" />
+					e.gsanchezf@ies-sabadell.cat
+				</SocialPill>
+
+			</nav>
+			
+		</SectionContainer>
+
+		<SectionContainer id="experiencia">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<BriefCase class="size=7" />
+				Experiencia laboral
+			</h2>
+			
+			<Experience />
+		</SectionContainer>
+
+		<SectionContainer id="proyectos">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size=7" />
+				Proyectos
+			</h2>
+			
+			<Projects />
+		</SectionContainer>
+
+	</main>
+</Layout>
