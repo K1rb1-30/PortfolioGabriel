@@ -5,6 +5,10 @@ import CSSIcon from "../icons/CSSIcon.astro"
 import JavascriptIcon from "../icons/JavascriptIcon.astro"
 import GithubIcon from "../icons/GithubIcon.astro"
 import WebIcon from "../icons/WebIcon.astro"
+import GodotIcon from "../icons/GodotIcon.astro"
+import PythonIcon from "../icons/PythonIcon.astro"
+
+
 const TAGS = {
     HTML: {
         name: "HTML",
@@ -24,6 +28,16 @@ const TAGS = {
         icon: JavascriptIcon,
 
     },
+    GODOT: {
+        name: "Godot",
+        class: "bg-gray-700 text-white",
+        icon: GodotIcon,
+    },
+    PYTHON: {
+        name: "Python",
+        class: "bg-blue-800 text-white",
+        icon: PythonIcon,
+    }
 
 }
 
@@ -33,8 +47,8 @@ const PROJECTS = [
         description: 'Caedes:RE es una aventura narrativa en pixel art con mecánicas psicológicas, exploración y combate ligero, donde cada paso puede ser un recuerdo... o una alucinación.',
         link: 'https://k1rb1-30.itch.io/caedesre',
         github: 'https://github.com/K1rb1-30/Caedes-Re',
-        image: '/projects/caedesre.webp',
-        tags: [TAGS.HTML, TAGS.CSS, TAGS.JavaScript]
+        image: '/projects/caedesreletra2.webp',
+        tags: [TAGS.GODOT, TAGS.PYTHON]
     },
     {
         title: 'Tus Imprescindibles - HTML SHOP',
@@ -63,6 +77,7 @@ const PROJECTS = [
                     </li>
                 ))}
             </ul>
+            <br>
             <img class="rounded shadow-2xl shadow-white/10" src={image} alt={`Captura de pantalla del proyecto ${image}`} />
             <span class="flex gap-x-2 flex-row my-4">
                 {
