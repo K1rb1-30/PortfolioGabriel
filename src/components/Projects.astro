@@ -7,6 +7,10 @@ import GithubIcon from "../icons/GithubIcon.astro"
 import WebIcon from "../icons/WebIcon.astro"
 import GodotIcon from "../icons/GodotIcon.astro"
 import PythonIcon from "../icons/PythonIcon.astro"
+import NextJsIcon from "../icons/NextJsIcon.astro"
+import SupabaseIcon from "../icons/SupabaseIcon.astro"
+import TailwindIcon from "../icons/TailwindIcon.astro"
+import TypescriptIcon from "../icons/TypescriptIcon.astro"
 
 
 const TAGS = {
@@ -37,18 +41,46 @@ const TAGS = {
         name: "Python",
         class: "bg-blue-800 text-white",
         icon: PythonIcon,
-    }
+    },
+    NEXTJS: {
+        name: "NextJS",
+        class: "bg-gray-800 text-white",
+        icon: NextJsIcon,
+    },
+    SUPABASE: {
+        name: "Supabase",
+        class: "bg-teal-900 text-white",
+        icon: SupabaseIcon,
+    },
+    TAILWIND: {
+        name: "TailwindCSS",
+        class: "bg-blue-900 text-white",
+        icon: TailwindIcon,
+    },
+    TYPESCRIPT: {
+        name: "TypeScript",
+        class: "bg-blue-800 text-white",
+        icon: TypescriptIcon,
+    },
 
 }
 
 const PROJECTS = [
     {
+        title: 'DEVYFYWEB',
+        description: 'Web que ofrece servicios de desarrollo web y automatizacion a empresas y particulares, con un enfoque en la eficiencia y la calidad, tambien incluye automatizacion de procesos con n8n y un formulario de contacto conectado a Supabase.',
+        link: 'https://devyfyweb.vercel.app/',
+        github: 'https://github.com/K1rb1-30/',
+        image: '/projects/devifyweb.webp',
+        tags: [TAGS.NEXTJS, TAGS.TYPESCRIPT, TAGS.TAILWIND]
+    },
+    {
         title: 'BASHTIPS',
-        description: 'Una colección de tips, trucos y atajos útiles para Bash, diseñada para ayudarte a mejorar tu flujo de trabajo en la terminal de Linux',
-        link: 'https://k1rb1-30.itch.io/caedesre',
-        github: 'https://github.com/K1rb1-30/Caedes-Re',
-        image: '/projects/caedesreletra2.webp',
-        tags: [TAGS.GODOT, TAGS.PYTHON]
+        description: 'Una colección de tips, trucos y atajos útiles para Bash, diseñada para ayudarte a mejorar tu flujo de trabajo en la terminal de Linux. Pequeño proyecto hecho en un dia con v0 y base de datos en supabase.',
+        link: 'https://bashtips.vercel.app/',
+        github: 'https://github.com/K1rb1-30/BashTips',
+        image: '/projects/bashtips.webp',
+        tags: [TAGS.NEXTJS,TAGS.TYPESCRIPT, TAGS.SUPABASE, TAGS.TAILWIND]
     },
     {
         title: 'CAEDES:RE',
