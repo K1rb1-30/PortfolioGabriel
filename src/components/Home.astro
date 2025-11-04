@@ -9,11 +9,28 @@ import DownloadIcon from '../icons/DownloadIcon.astro';
 // Animaciones con React
 
 import SplitText from './react/SplitText';
+import AnimatedContent from './react/AnimatedContent';
 
 ---
+
+<AnimatedContent client:load
+  distance={100}
+  direction="vertical"
+  reverse={false}
+  duration={0.8}
+  ease="power3.out"
+  initialOpacity={0}
+  animateOpacity
+  scale={1}
+  threshold={0.1}
+  delay={0}
+>
+  
+
 <section class="flex flex-row gap-x-10 md:gap-x-20 justify-center items-center flex-wrap lg:flex-nowrap">
     <div class="flex flex-col justify-center mr-10">
-            <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-6">Hey, soy Gabriel 
+            <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-6">Hey,<br>
+                soy Gabriel
 				<a 
 				 href="https://www.linkedin.com/in/gabriel-s%C3%A1nchez-flores-044a65310/"
 				 target="_blank"
@@ -71,5 +88,7 @@ import SplitText from './react/SplitText';
         <img class="rounded-xl size-60" src="https://avatars.githubusercontent.com/u/168423128?v=4" alt="Foto de perfil"/>
     </div>
 </section>
+
+</AnimatedContent>
 
 			
