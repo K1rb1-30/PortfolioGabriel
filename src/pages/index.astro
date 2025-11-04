@@ -1,12 +1,8 @@
 ---
-import Badge from '../components/Badge.astro';
 import Layout from '../layouts/Layout.astro';
-import SocialPill from '../components/SocialPill.astro';
-import LinkedInIcon from '../icons/LinkedInIcon.astro';
-import GithubIcon from '../icons/GithubIcon.astro';
-import MailIcon from '../icons/MailIcon.astro';
 import Experience from '../components/Experience.astro';
 import SectionContainer from '../components/SectionContainer.astro';
+import Home from '../components/Home.astro';
 import BriefCase from '../icons/BriefCase.astro';
 import CodeIcon from '../icons/CodeIcon.astro';
 import Projects from '../components/Projects.astro';
@@ -23,38 +19,7 @@ import Projects from '../components/Projects.astro';
 >
 	<main class="px-4">
 		<SectionContainer class="py-44 pb-32">
-			<img class="rounded-full size-12" src="https://avatars.githubusercontent.com/u/168423128?v=4" alt="Foto de perfil"/>
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-6">Hey, soy Gabriel 
-				<a 
-				 href="https://www.linkedin.com/in/gabriel-s%C3%A1nchez-flores-044a65310/"
-				 target="_blank"
-				 rel="noopener"
-				 class="flex justify-center items-center"
-				>
-				 <Badge>Disponible para trabajar</Badge>
-				</a> </h1>
-			<h2 class="text-xl  text-wrap max-w-[700px]">
-				<span>1 año de experiencia. </span><span class=" text-emerald-300">Tecnico Informático, Desarrollador Full-Stack y estudiante de Grado Superior de Desarrollo de Aplicaciones Web (1º curso).</span>
-				<span class="text-violet-200"> De Barcelona, España.</span></h2>
-
-			<nav class="flex gap-4 mt-7 flex-wrap">
-				<SocialPill href="https://www.linkedin.com/in/gabriel-s%C3%A1nchez-flores-044a65310/">
-					<LinkedInIcon class="size-4 md:size=6" />
-					LinkedIn
-				</SocialPill>
-
-				<SocialPill href="https://github.com/K1rb1-30">
-					<GithubIcon class="size-4 md:size=6" />
-					Github
-				</SocialPill>
-
-				<SocialPill href="mailto:e.gsanchezf@ies-sabadell.cat">
-					<MailIcon class="size-4 md:size=6" />
-					e.gsanchezf@ies-sabadell.cat
-				</SocialPill>
-
-			</nav>
-			
+			<Home />
 		</SectionContainer>
 
 		<SectionContainer id="experiencia">

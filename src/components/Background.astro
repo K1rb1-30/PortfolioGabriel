@@ -1,0 +1,14 @@
+---
+import Aurora from '../components/react/Aurora.tsx';
+const { class: className } = Astro.props
+---
+
+<section class={`${className} fixed inset-0 -z-10 overflow-hidden`}>
+    <Aurora
+  			client:only="react"
+  			colorStops={["#ab66ff", "#b19eef", "#5227ff"]}
+  			blend={0.5}
+  			amplitude={1.0}
+  			speed={1.0}
+		/>
+</section>
