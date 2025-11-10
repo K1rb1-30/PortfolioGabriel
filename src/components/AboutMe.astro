@@ -1,0 +1,127 @@
+
+---
+
+import HtmlIcon from "../icons/HtmlIcon.astro"
+import CSSIcon from "../icons/CSSIcon.astro"
+import JavascriptIcon from "../icons/JavascriptIcon.astro"
+import GithubIcon from "../icons/GithubIcon.astro"
+import WebIcon from "../icons/WebIcon.astro"
+import GodotIcon from "../icons/GodotIcon.astro"
+import PythonIcon from "../icons/PythonIcon.astro"
+import NextJsIcon from "../icons/NextJsIcon.astro"
+import SupabaseIcon from "../icons/SupabaseIcon.astro"
+import TailwindIcon from "../icons/TailwindIcon.astro"
+import TypescriptIcon from "../icons/TypescriptIcon.astro"
+
+const SKILLS = {
+    HTML: {
+        name: "HTML",
+        class: "bg-orange-500 text-white",
+        icon: HtmlIcon,
+    },
+
+    CSS: {
+        name: "CSS",
+        class: "bg-blue-500 text-white",
+        icon: CSSIcon,
+    },
+
+    JavaScript: {
+        name: "JavaScript",
+        class: "bg-yellow-500 text-white",
+        icon: JavascriptIcon,
+
+    },
+    GODOT: {
+        name: "Godot",
+        class: "bg-gray-700 text-white",
+        icon: GodotIcon,
+    },
+    PYTHON: {
+        name: "Python",
+        class: "bg-blue-800 text-white",
+        icon: PythonIcon,
+    },
+    NEXTJS: {
+        name: "NextJS",
+        class: "bg-gray-800 text-white",
+        icon: NextJsIcon,
+    },
+    SUPABASE: {
+        name: "Supabase",
+        class: "bg-teal-900 text-white",
+        icon: SupabaseIcon,
+    },
+    TAILWIND: {
+        name: "TailwindCSS",
+        class: "bg-blue-900 text-white",
+        icon: TailwindIcon,
+    },
+    TYPESCRIPT: {
+        name: "TypeScript",
+        class: "bg-blue-800 text-white",
+        icon: TypescriptIcon,
+    },
+
+}
+
+const TIPOSEND = [
+    {
+        title: 'FRONTEND',
+        description: '',
+        tags: [SKILLS.NEXTJS, SKILLS.TYPESCRIPT, SKILLS.TAILWIND]
+    },
+    {
+        title: 'BACKEND',
+        description: '',
+        tags: [SKILLS.NEXTJS,SKILLS.TYPESCRIPT, SKILLS.SUPABASE, SKILLS.TAILWIND]
+    }
+]
+
+
+
+---
+
+
+
+<section>
+    <p>Hello! I'm a passionate developer with a love for creating dynamic and user-friendly web applications. With experience in various programming languages and frameworks, I enjoy tackling challenging problems and continuously learning new technologies.</p>
+    <p>In my free time, I like to contribute to open-source projects, explore new tech trends, and work on personal projects that allow me to experiment and grow as a developer.</p>
+    <div class="flex justify-center flex-col md:flex-row gap-8 mt-6">
+        <div>
+            <h3 class="text-4xl font-semibold flex justify-center">Skills</h3>
+            <div class="flex flex-wrap justify-center gap-9 mt-4">
+                {
+                TIPOSEND.map(({ title, description, tags}) => (
+                    <div class="mb-4 p-4 border border-gray-300 rounded-lg w-64">
+                        <h4 class="flex text-xl font-semibold justify-center">{title}</h4>
+                        <p class="mb-2">{description}</p>
+                        <div class="flex flex-wrap gap-2 justify-center">
+                            {
+                                tags.map(({ name, class: className, icon: Icon }) => (
+                                    <div class="flex justify-center flex-row items-center gap-2">
+                                        <div class={`flex flex-col items-center gap-1 px-2 py-1 rounded-xl ${className}`}>
+                                            <Icon class="w-20 h-20 p-2" />
+
+                                        </div>
+                                    </div>
+                                    
+                                ))
+                            }
+                        </div>
+                    </div>
+                ))
+            }
+            </div>
+        </div>
+    </div>
+
+    <div class="m-4 flex justify-center">
+
+    <button class="bg-gray-600 p-2 rounded-full">
+        <a href="/contact" class="text-white p-9">Contact Me</a>
+    </button>
+    </div>
+    
+
+</section>
