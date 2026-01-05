@@ -12,23 +12,33 @@ import NextJsIcon from "../icons/NextJsIcon.astro"
 import SupabaseIcon from "../icons/SupabaseIcon.astro"
 import TailwindIcon from "../icons/TailwindIcon.astro"
 import TypescriptIcon from "../icons/TypescriptIcon.astro"
+import JavaIcon from "../icons/JavaIcon.astro"
+import MysqlIcon from "../icons/MysqlIcon.astro"
+import AstroIcon from "../icons/AstroICon.astro"
+import ReactIcon from "../icons/ReactIcon.astro"
+import BootstrapIcon from "../icons/BootstrapIcon.astro"
+import DjangoIcon from "../icons/DjangoIcon.astro"
+import WordpressIcon from "../icons/WordpressIcon.astro"
+import FirebaseIcon from "../icons/FirebaseIcon.astro"
+import GamemakerIcon from "../icons/GamemakerIcon.astro"
+import JoomlaIcon from "../icons/JoomlaIcon.astro"
 
 const SKILLS = {
     HTML: {
         name: "HTML",
-        class: "bg-orange-500 text-white",
+        class: "bg-gray-700 text-white",
         icon: HtmlIcon,
     },
 
     CSS: {
         name: "CSS",
-        class: "bg-blue-500 text-white",
+        class: "bg-gray-700 text-white",
         icon: CSSIcon,
     },
 
-    JavaScript: {
+    JAVASCRIPT: {
         name: "JavaScript",
-        class: "bg-yellow-500 text-white",
+        class: "bg-gray-700 text-white",
         icon: JavascriptIcon,
 
     },
@@ -39,42 +49,106 @@ const SKILLS = {
     },
     PYTHON: {
         name: "Python",
-        class: "bg-blue-800 text-white",
+        class: "bg-gray-700 text-white",
         icon: PythonIcon,
     },
     NEXTJS: {
         name: "NextJS",
-        class: "bg-gray-800 text-white",
+        class: "bg-gray-700 text-white",
         icon: NextJsIcon,
     },
     SUPABASE: {
         name: "Supabase",
-        class: "bg-teal-900 text-white",
+        class: "bg-gray-700 text-white",
         icon: SupabaseIcon,
     },
     TAILWIND: {
         name: "TailwindCSS",
-        class: "bg-blue-900 text-white",
+        class: "bg-gray-700 text-white",
         icon: TailwindIcon,
     },
     TYPESCRIPT: {
         name: "TypeScript",
-        class: "bg-blue-800 text-white",
+        class: "bg-gray-700 text-white",
         icon: TypescriptIcon,
     },
-
+    JAVA: {
+        name: "Java",
+        class: "bg-gray-700 text-white",
+        icon: JavaIcon,
+    },
+    MYSQL: {
+        name: "MySQL",
+        class: "bg-gray-700 text-white",
+        icon: MysqlIcon,
+    },
+    ASTRO: {
+        name: "Astro",
+        class: "bg-gray-700 text-white",
+        icon: AstroIcon,
+    },
+    REACT: {
+        name: "React",
+        class: "bg-gray-700 text-white",
+        icon: ReactIcon,
+    },
+    BOOTSTRAP: {
+        name: "Bootstrap",
+        class: "bg-gray-700 text-white",
+        icon: BootstrapIcon,
+    },
+    DJANGO: {
+        name: "Django",
+        class: "bg-gray-700 text-white",
+        icon: DjangoIcon,
+    },
+    WORDPRESS: {
+        name: "WordPress",
+        class: "bg-gray-700 text-white",
+        icon: WordpressIcon,
+    },
+    FIREBASE: {
+        name: "Firebase",
+        class: "bg-gray-700 text-white",
+        icon: FirebaseIcon,
+    },
+    JOOMLA: {
+        name: "Joomla",
+        class: "bg-gray-700 text-white",
+        icon: JoomlaIcon,
+    },
+    GAMEMAKER: {
+        name: "GameMaker",
+        class: "bg-gray-700 text-white",
+        icon: GamemakerIcon,
+    },
 }
 
 const TIPOSEND = [
     {
-        title: 'FRONTEND',
+        title: 'LENGUAGES',
         description: '',
-        tags: [SKILLS.NEXTJS, SKILLS.TYPESCRIPT, SKILLS.TAILWIND]
+        tags: [SKILLS.HTML, SKILLS.CSS, SKILLS.JAVASCRIPT, SKILLS.TYPESCRIPT, SKILLS.PYTHON, SKILLS.JAVA, SKILLS.MYSQL]
     },
     {
-        title: 'BACKEND',
+        title: 'FRAMEWORKS',
         description: '',
-        tags: [SKILLS.NEXTJS,SKILLS.TYPESCRIPT, SKILLS.SUPABASE, SKILLS.TAILWIND]
+        tags: [SKILLS.NEXTJS,SKILLS.TAILWIND,SKILLS.ASTRO,SKILLS.REACT,SKILLS.BOOTSTRAP,SKILLS.DJANGO]
+    },
+    {
+        title: 'CMS',
+        description: '',
+        tags: [SKILLS.WORDPRESS, SKILLS.JOOMLA]
+    },
+    {
+        title: 'DDBB',
+        description: '',
+        tags: [SKILLS.SUPABASE, SKILLS.FIREBASE]
+    },
+    {
+        title: 'GAME ENGINES',
+        description: '',
+        tags: [SKILLS.GODOT, SKILLS.GAMEMAKER]
     }
 ]
 
@@ -89,7 +163,7 @@ const TIPOSEND = [
     <p>In my free time, I like to contribute to open-source projects, explore new tech trends, and work on personal projects that allow me to experiment and grow as a developer.</p>
     <div class="flex justify-center flex-col md:flex-row gap-8 mt-6">
         <div>
-            <h3 class="text-4xl font-semibold flex justify-center">Skills</h3>
+            <h3 class="text-4xl font-semibold flex justify-center">Habilidades</h3>
             <div class="flex flex-wrap justify-center gap-9 mt-4">
                 {
                 TIPOSEND.map(({ title, description, tags}) => (

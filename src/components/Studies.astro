@@ -1,0 +1,38 @@
+---
+import StudiesItem from "./StudiesItem.astro"
+
+const STUDIES = [
+    {
+        date: '2025 - 2027',
+        title: 'Ciclo Formativo de Grado Superior de Desarrollo de Aplicaciones Web - IES Sabadell',
+        description:
+            'Estudio de desarrollo web tanto frontend como backend. Aprendizaje de lenguajes como HTML, CSS, JavaScript, TypeScript, PHP, Python, SQL, entre otros. Uso de frameworks y librerías como React, Bootstrap y Django. Gestión de bases de datos y despliegue de aplicaciones web.',
+        lastest: true, //Esto es para que salga el tag de cursando
+    },
+    {
+        date: '2023 - 2025',
+        title: 'Ciclo Formativo de Grado Medio de Sistemas Microinformáticos y Redes - IES Sabadell',
+        description:
+            'Formación en instalación, configuración y mantenimiento de sistemas microinformáticos y redes. Aprendizaje de hardware, software, redes locales y servicios de red. Desarrollo de habilidades para solucionar problemas técnicos y brindar soporte a usuarios.',
+    },
+    {
+        date: '2019 - 2023',
+        title: 'Educación Secundaria Obligatoria (ESO) - Institut Ferran Casablancas',
+        description:
+            'Educación secundaria que proporciona una base sólida en diversas materias académicas, incluyendo matemáticas, ciencias, lengua y literatura, historia, educación física y tecnología. Desarrollo de habilidades críticas y preparación para estudios futuros o formación profesional.',
+    }
+
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+    {
+        STUDIES.map(study => (
+            <li class="mb-10 ms-6">
+                <StudiesItem {...study} />
+            </li>
+        ))
+    }                  
+    
+</ol>
+
