@@ -1,0 +1,52 @@
+---
+interface Props {
+    title?: string;
+}
+
+const { title = "Contacto" } = Astro.props;
+---
+
+<section class="max-w-md mx-auto my-8 p-6">
+    <h2 class="text-2xl font-bold mb-4">{title}</h2>
+    <form method="POST" action="/api/contact">
+        <div class="mb-6">
+            <label for="name" class="block mb-2 font-semibold">Nombre</label>
+            <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Tu nombre"
+                class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+            />
+        </div>
+
+        <div class="mb-6">
+            <label for="email" class="block mb-2 font-semibold">Correo</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="tu@correo.com"
+                class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+            />
+        </div>
+
+        <div class="mb-6">
+            <label for="reason" class="block mb-2 font-semibold">Motivo</label>
+            <textarea
+                id="reason"
+                name="reason"
+                required
+                placeholder="¿Por qué quieres contactarme?"
+                rows="5"
+                class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+            ></textarea>
+        </div>
+
+        <button type="submit" class="bg-blue-500 text-white py-3 px-6 rounded hover:bg-blue-600">
+            Enviar
+        </button>
+    </form>
+</section>

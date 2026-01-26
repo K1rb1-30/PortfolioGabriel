@@ -9,6 +9,8 @@ import StudiesIcon from '../icons/StudiesIcon.astro';
 import Projects from '../components/Projects.astro';
 import AboutMe from '../components/AboutMe.astro';
 import Studies from '../components/Studies.astro';
+import MailIcon from '../icons/MailIcon.astro';
+import Contact from '../components/Contact.astro';
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -57,6 +59,24 @@ import Studies from '../components/Studies.astro';
 			</h2>
 			
 			<Projects />
+		</SectionContainer>
+
+		<SectionContainer id="contacto">
+			<h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+				<MailIcon class="size=7" />
+				Contacto
+			</h2>
+			
+			<p class="text-lg mb-4">
+				¿Interesado en trabajar conmigo o tienes alguna pregunta? No dudes en contactarme a través de mi correo electrónico:
+				<div class="flex justify-center">
+					<a href="mailto:contactogabrielsf@gmail.com" class="text-white-400 hover:underline">
+						<button class="p-3 m-4 bg-violet-400 rounded-2xl ease-in-out hover:scale-105 hover:shadow-lg transition ">contactogabrielsf@gmail.com</button>
+					</a>
+				</div> 
+				
+			</p>
+			<!-- <Contact /> -->
 		</SectionContainer>
 
 	</main>

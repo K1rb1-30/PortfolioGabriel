@@ -27,23 +27,24 @@ import AnimatedContent from './react/AnimatedContent';
 >
   
 
-<section class="flex flex-row gap-x-10 md:gap-x-20 justify-center items-center flex-wrap lg:flex-nowrap">
-    <div class="flex flex-col justify-center mr-10">
-            <h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-6">Hey,<br>
-                soy Gabriel
-				<a 
-				 href="https://www.linkedin.com/in/gabriel-s%C3%A1nchez-flores-044a65310/"
-				 target="_blank"
-				 rel="noopener"
-				 class="flex justify-center items-center"
-				>
-				 <Badge>Disponible para trabajar</Badge>
-				</a>
+<section class="flex flex-col lg:flex-row gap-6 md:gap-10 lg:gap-x-20 justify-center items-center lg:flex-wrap">
+    <div class="flex flex-col justify-center items-center lg:items-start w-full lg:w-auto px-4">
+            <h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-col sm:flex-row gap-x-4 gap-y-2 pb-4 md:pb-6 text-center sm:text-left">
+                <span>Hey,</span>
+                <span>soy Gabriel</span>
+                <a 
+                 href="https://www.linkedin.com/in/gabriel-s%C3%A1nchez-flores-044a65310/"
+                 target="_blank"
+                 rel="noopener"
+                 class="flex justify-center sm:justify-start items-center"
+                >
+                 <Badge>Disponible para trabajar</Badge>
+                </a>
             </h1>
-            <div class="">
-				<SplitText client:load
+            <div class="w-full">
+                <SplitText client:load
                 text="Desarrollador Full-Stack & Técnico Informático"
-                className="text-xl font-semibold text-white text-center"
+                className="text-lg md:text-xl font-semibold text-white text-center"
                 delay={100}
                 duration={1.5}
                 ease="power3.out"
@@ -56,36 +57,36 @@ import AnimatedContent from './react/AnimatedContent';
                 />
             </div>
 
-			<h3 class="text-xl mt-5 text-wrap max-w-[700px]">
-				<span>1 año de experiencia. </span><span class=" text-emerald-300">Tecnico Informático, Desarrollador Full-Stack y estudiante de Grado Superior de Desarrollo de Aplicaciones Web (1º curso).</span>
-				<span class="text-violet-200"> De Barcelona, España.</span>
+            <h3 class="text-base md:text-xl mt-5 text-wrap max-w-[700px] text-center lg:text-left">
+                <span>1 año de experiencia. </span><span class="text-emerald-300">Tecnico Informático, Desarrollador Full-Stack y estudiante de Grado Superior de Desarrollo de Aplicaciones Web (1º curso).</span>
+                <span class="text-violet-200"> De Barcelona, España.</span>
             </h3>
 
-			<nav class="flex gap-4 mt-7 flex-wrap">
-				<SocialPill href="https://www.linkedin.com/in/gabriel-s%C3%A1nchez-flores-044a65310/">
-					<LinkedInIcon class="size-4 md:size=6" />
-					LinkedIn
-				</SocialPill>
+            <nav class="flex gap-3 md:gap-4 mt-7 flex-wrap justify-center lg:justify-start w-full">
+                <SocialPill href="https://www.linkedin.com/in/gabriel-s%C3%A1nchez-flores-044a65310/">
+                    <LinkedInIcon class="size-4 md:size-5 lg:size-6" />
+                    <span class="hidden sm:inline">LinkedIn</span>
+                </SocialPill>
 
-				<SocialPill href="https://github.com/K1rb1-30">
-					<GithubIcon class="size-4 md:size=6" />
-					Github
-				</SocialPill>
+                <SocialPill href="https://github.com/K1rb1-30">
+                    <GithubIcon class="size-4 md:size-5 lg:size-6" />
+                    <span class="hidden sm:inline">Github</span>
+                </SocialPill>
 
-				<SocialPill href="mailto:e.gsanchezf@ies-sabadell.cat">
-					<MailIcon class="size-4 md:size=6" />
-					e.gsanchezf@ies-sabadell.cat
-				</SocialPill>
+                <SocialPill href="mailto:contactogabrielsf@gmail.com">
+                    <MailIcon class="size-4 md:size-5 lg:size-6" />
+                    <span class="hidden sm:inline">contactogabrielsf@gmail.com</span>
+                </SocialPill>
 
                 <SocialPill href="https://www.canva.com/design/DAFviIZmNQc/QE_JP8-Zo_DAEH8WnfVA-Q/view?utm_content=DAFviIZmNQc&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hd1c4b44cf3" alt="CV de Gabriel Sánchez Flores">
-					<DownloadIcon class="size-4 md:size=6" />
-					Ver CV
-				</SocialPill>
-			</nav>
+                    <DownloadIcon class="size-4 md:size-5 lg:size-6" />
+                    <span class="hidden sm:inline">Ver CV</span>
+                </SocialPill>
+            </nav>
     </div>
 
-    <div>
-        <img class="rounded-xl size-60" src="https://avatars.githubusercontent.com/u/168423128?v=4" alt="Foto de perfil"/>
+    <div class="flex justify-center">
+        <img class="rounded-xl size-48 sm:size-56 md:size-60" src="https://avatars.githubusercontent.com/u/168423128?v=4" alt="Foto de perfil"/>
     </div>
 </section>
 
